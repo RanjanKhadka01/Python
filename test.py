@@ -92,3 +92,72 @@
 # # students.sort(key=grade, reverse=True)
 # for i in shorted_students:
 #     print(i)
+
+# map() = applies a function to each item in an iterable (list, tuple,etc)
+
+# map(function, iterable)
+#
+# store = [("shirt", 20.00),
+#          ("pant", 25.000),
+#          ("jacket", 50.000),
+#          ("socks", 10.000)]
+#
+# to_euros = lambda data: (data[0], data[1]*0.82)
+#
+# store_euros = list(map(to_euros, store))
+# for i in store_euros:
+#     print(i)
+
+# Filter() = creates a collection of elements from an iterable for which a function returns true
+# filter(function, iterable)
+
+# friends = [("Ranjan", 22),
+#            ("Dhimal", 23),
+#            ("Gothey", 18),
+#            ("Bidur", 17)]
+#
+# age = lambda data: data[1] >= 18
+# drinking_age = list(filter(age, friends))
+# for i in drinking_age:
+#     print(i)
+
+
+# reduce() = apply a function to an iterable and reduce it to a single cumulative value.
+#           performs function on first two elements and repeats process until 1 value remains
+# reduce(function, iterable)
+# import functools
+# letters = ["H", 'E', "L", 'L', "O"]
+# word = functools.reduce(lambda x, y:x+y,letters)
+# print(word)
+#
+# factorials = [5,4,3,2,1]
+# results = functools.reduce(lambda x,y:x*y,factorials)
+# print(results)
+
+# list comprehension = a way to create a new list with less syntax
+#                       can mimic certain lambda function, easier to read
+#               list = [expression for items in iterable]
+#               list = [expression for item in iterable if conditional]
+#               list = [expression if/else for item in iterable]
+
+# squares = [i*i for i in range(1,11)]
+# print(squares)
+
+# students = [100, 90, 80, 70, 60, 50, 40, 30, 0]
+# passed_student = list(filter(lambda x: x>=60, students))
+# passed_student = [i for i in students if i >= 60]
+# passed_student = [i if i >=60 else "Failed" for i in students]
+# print(passed_student)
+
+# dictionary comprehension = create dictionaries using expression
+#                           can replace for loops and certain lambda function
+
+# dictionary = {key: expression for (key, values) in iterable}
+
+cities_in_F = {'Kathmandu': 40, 'Bhaktapur': 50, 'Lalitpur':75, 'Biratnagar':100}
+cities_in_C = {key: round((value-32)*(5/9)) for (key, value) in cities_in_F.items()}
+print(cities_in_C)
+
+weather = {'Kathmandu': "Sunny", 'Bhaktapur': "Snowing", 'Lalitpur':"cloudy", 'Morang':"Sunny"}
+sunny_weather = {key: value for (key,value) in weather.items() if value =="Sunny"}
+print(sunny_weather)
