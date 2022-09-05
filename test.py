@@ -154,10 +154,25 @@
 
 # dictionary = {key: expression for (key, values) in iterable}
 
-cities_in_F = {'Kathmandu': 40, 'Bhaktapur': 50, 'Lalitpur':75, 'Biratnagar':100}
-cities_in_C = {key: round((value-32)*(5/9)) for (key, value) in cities_in_F.items()}
-print(cities_in_C)
+# cities_in_F = {'Kathmandu': 40, 'Bhaktapur': 50, 'Lalitpur':75, 'Biratnagar':100}
+# cities_in_C = {key: round((value-32)*(5/9)) for (key, value) in cities_in_F.items()}
+# print(cities_in_C)
+#
+# weather = {'Kathmandu': "Sunny", 'Bhaktapur': "Snowing", 'Lalitpur':"cloudy", 'Morang':"Sunny"}
+# sunny_weather = {key: value for (key,value) in weather.items() if value =="Sunny"}
+# print(sunny_weather)
 
-weather = {'Kathmandu': "Sunny", 'Bhaktapur': "Snowing", 'Lalitpur':"cloudy", 'Morang':"Sunny"}
-sunny_weather = {key: value for (key,value) in weather.items() if value =="Sunny"}
-print(sunny_weather)
+# zip(*iterables) = aggregate elements from two or more iterables (lists, tuples, sets, etc)
+#                   creates a zip object with paired elements stored in tuples for each element)
+
+# user_name = ['Ranjan', "Khadka", "admin"]
+# password = ("password1", 'abc123', "admin")
+# last_login = ["1/1/2022", "1/2/2022", "2/2/2021"]
+#
+# user = zip(user_name, password, last_login)
+# print(type(user))
+#
+# for i in user:
+#     print(i)
+
+
